@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+/* Cài màu chung cho website */
+:root {
+  --primary-color: #2e8b57;
+  --secondary-color: #1a5f38;
+  --dark-color: #062c17;
+  --light-color: #f4f4f4;
+  --success-color: #047aed;
+  --error-color: #d9534f;
+}
+
+/* Cài đặt ban đầu */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* Căn chỉnh font, màu, khoảng cách chung cho toàn bộ trang */
+body {
+  font-family: "Times New Roman", Times, serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+/* Màu văn bản đường link */
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* Căn chỉnh tiêu đề */
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+/* Căn chỉnh các đoạn bài văn bài báo */
+p {
+  margin: 10px 0;
+}
+/* Căn chỉnh kích thước ảnh chung */
+img {
+  width: 100%;
+}
+
+pre,
+code {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Navbar */
+.navbar {
+  /* Hàm var() được sử dụng để chèn giá trị của một biến trong CSS */
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 70px;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+/* Showcase */
+.showcase {
+  height: 400px;
+  background-color: var(--primary-color);
+  color: #fff;
+
+  /* Đặt luôn vị trí tương đối cho khối lớn nhất để dễ căn chỉnh các khối bên trong showcase */
+  position: relative;
+  background-image: url(/images/beerbanner.jpg);
+  object-fit: cover;
+}
+/* .banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 400px;
+  /* Căn chỉnh không bị méo ảnh sau khi chỉnh width or height */
+/* object-fit: cover; */
+/* object-position: 150px 0px; chỉnh toạ độ ảnh */
+/* } */
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 0;
+  /* font-weight: bold; */
+}
+
+.showcase .grid {
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+  overflow: visible;
+}
+
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in;
+}
+
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  /* Các thành phần HTML có chỉ số z-index cao hơn sẽ được xếp nằm ở bên trên. 
+  Ngược lại, thành phần HTML có chỉ số z-index thấp hơn sẽ nằm ở phía dưới. */
+  z-index: 100;
+  animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+
+/* Nhớ có dấy phẩy khi gọi class có chứa type */
+.showcase-form input[type="text"],
+.showcase-form input[type="address"],
+.showcase-form input[type="email"] {
+  border: none;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+/* Không cho hiện border input khi click chuột vào vùng điền dữ liệu */
+.showcase-form input:focus {
+  outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  background-color: #fff;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  /* Skew: nghiêng theo trục ngang dọc x,y */
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+
+/* Stats */
+.stats {
+  padding-top: 100px;
+  animation: slideInFromBottom 1s ease-in;
+}
+
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+}
+
+.stats .grid h3 {
+  font-size: 35px;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Cli */
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* .cli img */
+/* Bộ chọn kết hợp > *:first-child
+- Selector > *:first-child là bộ chọn đến mọi phần tử con là con trực tiếp đầu tiên. */
+.cli .grid > *:first-child {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  object-position: 0 5px;
+}
+
+/* Cloud */
+.cloud {
+  background-image: url(/images/cloud-img.jpg);
+  object-fit: cover;
+}
+
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+.cloud .cloud-text {
+  z-index: 100;
+}
+/* Languages */
+.languages .flex {
+  /* wrap: bồi, bọc (không cho làm mất chi tiết */
+  /* Flex-wrap dùng để điều chỉnh việc bọc các item nằm trong container.
+   Thuộc tình này giải quyết vấn đề là khi chúng ta tăng chiều rộng của trình duyệt 
+   thì có thể một số item sẽ bị nhảy khỏi hàng */
+  flex-wrap: wrap;
+}
+
+.languages .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  /* Cho hiệu ứng mượt ease vào trực tiếp thẻ_ sẽ mượt mà hơn cho vào hover */
+  /* Transition là hiệu ứng khi chỉ chuột vào, khác với animation (hiệu ứng khi mới đầu tải trang */
+  transition: transform 0.2s ease-in;
+}
+
+.languages .card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.languages .card:hover {
+  transform: translateY(-15px);
+}
+/* Footer */
+.footer .social a {
+  margin: 0 10px;
+}
+
+.footer nav ul {
+  text-align: center;
+}
+
+/* Features */
+.features-head img,
+.docs-head img {
+  width: 200px;
+  justify-self: flex-end;
+}
+
+.features-sub-head img {
+  width: 300px;
+  justify-self: flex-end;
+}
+
+.features-main .card > i {
+  margin-right: 20px;
+}
+
+.features-main .grid {
+  padding: 30px;
+}
+
+.features-main .flex {
+  justify-content: flex-start;
+}
+
+/* Bộ chọn phần tử element selector thì chỉ cần (:firstchild luôn) ví dụ (li:first-child)
+Nhưng với class selector thì cần thêm (> *: first-child ）như dưới */
+.features-main .grid > *:first-child {
+  grid-column: 1 / span 3;
+}
+
+/* Dùng .class > *:nth-child() trong ngoặc sẽ điền con trỏ đến child 2, 3, 4 theo ý muốn */
+.features-main .grid > *:nth-child(2) {
+  grid-column: 1 / span 2;
+}
+
+/* Docs */
+.docs-main h3 {
+  margin: 20px 0;
+}
+
+.docs-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+}
+
+/* Cách chỉnh thẻ nav chứa a*/
+.docs-main nav li {
+  font-size: 17px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.docs-main nav a:hover {
+  font-weight: bold;
+}
+
+/* Animations */
+/* positive negative nghia la tich cuc va tieu cuc , dương bản và âm bản */
+/*  */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* -------------------------------------------------------- */
+/* Tablet and under */
+@media (max-width: 768px) {
+  /* body {
+    display: none;
+  } */
+
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid,
+  .features-main .grid,
+  .docs-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto;
+  }
+
+  .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+    animation: slideInFromTop 1s ease-in;
+  }
+
+  .showcase-form {
+    justify-self: center;
+    margin: auto;
+  }
+
+  .cli .grid > *:first-child {
+    /* Chỉnh tất cả các items xếp theo cột y column từ trên xuống */
+    grid-column: 1;
+    grid-row: 1;
+    object-position: 0 5px;
+  }
+  /* Căn chỉnh hình ảnh và văn bản ra giữa trên @media buoc 1 */
+  .features-head,
+  .features-sub-head,
+  .docs-head {
+    text-align: center;
+  }
+  /* Căn chỉnh hình ảnh và văn bản ra giữa trên @media buoc 2 */
+
+  .features-head img,
+  .features-sub-head img,
+  .docs-head img {
+    justify-self: center;
+  }
+
+  /* Chỉnh cho card 1 và card 2 về giá trị mặc định grid-column: 1/2,
+   hiện tại đang có giá trị 1/span3, 1/span2 */
+
+  .features-main .grid > *:first-child,
+  .features-main .grid > *:nth-child(2) {
+    grid-column: 1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  /* Kiểm tra hiển thị vùng chiều rộng được chọn (vùng nào trắng là vùng được chọn */
+  /* body {
+    display: none;
+  } */
+
+  .navbar {
+    height: 110px;
+  }
+
+  .navbar .flex {
+    /* Căn các items theo hướng cột dọc đi xuống */
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}

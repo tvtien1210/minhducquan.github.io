@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Minh Đức | Bia Xóm Giữa</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="container flex">
+        <h1 class="logo">Minh Đức Quán</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="features.html">Tính năng</a></li>
+            <li><a href="docs.html">Thông tin</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Showcase -->
+    <section class="showcase">
+      <div class="container grid">
+        <div class="showcase-text">
+          <h1 class="z-index">Đón nhận mọi cơn khát</h1>
+          <p class="z-index">
+            Với phương châm "Cơn khát là khởi phát của cơn điên, mà muốn giảm
+            điên hãy đến liền Minh Đức Quán". Ông nào vợ bỏ vợ chê, đến Minh Đức
+            Quán vợ lại quay trở về. Nhanh uống thì còn mà chậm uống thì chỉ có
+            vào Sài Gòn mà say. Minh Đức Quán xin kính chào tất cả quý khách.
+            Chúc quý khách có những buổi chiều hè cực chill cùng với Minh Đức
+            Quán.
+          </p>
+          <a href="features.html" class="btn btn-outline">Đọc tiếp >>></a>
+        </div>
+
+        <div class="showcase-form card">
+          <!-- không nên có 2 h1 sẽ rất khó css, nên tựa đề này sẽ đặt là "h2" -->
+          <h2>Đăng ký</h2>
+          <form>
+            <div class="form-control">
+              <input type="text" name="name" placeholder="Họ và tên" required />
+            </div>
+            <div class="form-control">
+              <input
+                type="address"
+                name="address"
+                placeholder="Địa chỉ nhận hàng"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <!-- primary: can nguyen -->
+            <input type="submit" value="Send" class="btn btn-primary" />
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Stats: thống kê -->
+    <section class="stats">
+      <!-- Thêm container để item kết thúc ở một điểm chứ không phải kéo dài hết trang web  -->
+      <div class="container">
+        <h3 class="stats-heading text-center my-1">
+          Chào mừng khách hàng đến với quán bia ngon, sạch đẹp mang tên Bia Xóm
+          Giữa, thuộc tiêu chuẩn quốc gia về an toàn vệ sinh thực phẩm.
+        </h3>
+
+        <div class="grid grid-3 text-center my-4">
+          <div>
+            <!-- <i class="fas fa-server fa-3x"> </i> -->
+            <i class="fa-solid fa-people-robbery fa-3x"></i>
+            <h3>68,405</h3>
+            <p class="text-secondary">Khách hàng ghé quán</p>
+          </div>
+          <div>
+            <!-- <i class="fas fa-upload fa-3x"> </i> -->
+            <i class="fa-solid fa-check-to-slot fa-3x"></i>
+            <h3>4768 Két</h3>
+            <p class="text-secondary">Lượng bia tiêu thụ</p>
+          </div>
+          <div>
+            <i class="fas fa-project-diagram fa-3x"> </i>
+            <h3>46,388</h3>
+            <p class="text-secondary">Lượt tương tác</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Cli -->
+    <section class="cli">
+      <div class="container grid">
+        <img src="images/cli2.png" alt="" />
+        <div class="card">
+          <h3>Dịu dàng đến từng phút giây</h3>
+        </div>
+        <div class="card">
+          <h3>Lên mây lại càng phải uống</h3>
+        </div>
+      </div>
+    </section>
+    <!-- Cloud  -->
+    <section class="cloud bg-primary my-2 py-2">
+      <div class="container grid">
+        <div class="text-center">
+          <!-- lg: large -->
+          <h2 class="lg">Bia hơi vị Mật Ong</h2>
+          <p class="lead my-1">
+            Hương vị mà bạn chưa từng trải. Khát, mát, thơm ngon.
+          </p>
+          <a href="features.html" class="btn btn-outline">Đọc tiếp >>></a>
+        </div>
+        <img src="images/cloud-beer.png" alt="" />
+      </div>
+    </section>
+    <!-- Languages -->
+    <section class="languages">
+      <h2 class="md text-center my-2">Thương hiệu liên kết</h2>
+      <div class="container flex">
+        <div class="card">
+          <h4>Asahi</h4>
+          <img src="images/logo-beer/asahi-beer.png" alt="" />
+        </div>
+        <div class="card">
+          <h4>Kilroy's</h4>
+          <img src="images/logo-beer/kilroy's-beer.png"" />
+        </div>
+        <div class="card">
+          <h4>Heineken</h4>
+          <img src="images/logo-beer/heineken-beer.png" alt="" />
+        </div>
+        <div class="card">
+          <h4>Bavaria</h4>
+          <img src="images/logo-beer/bavaria-beer.png" alt="" />
+        </div>
+        <div class="card">
+          <h4>Grimber</h4>
+          <img src="images/logo-beer/grimbergen-beer.png" alt="" />
+        </div>
+        <div class="card">
+          <h4>Pilsen</h4>
+          <img src="images/logo-beer/pilsen-beer.png" alt="" />
+        </div>
+        <div class="card">
+          <h4>Tiger</h4>
+          <img src="images/logo-beer/tiger-beer.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5">
+      <div class="container grid grid-3">
+        <div>
+          <h1>Minh Đức Quán</h1>
+          <p>Copyright &copy; 2023</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html"></a>Trang chủ</li>
+            <li><a href="features.html"></a>Tính năng</li>
+            <li><a href="docs.html"></a>Thông tin</li>
+          </ul>
+        </nav>
+        <div class="social">
+          <a href="#"><i class="fab fa-github fa-2x"></i></a>
+          <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
