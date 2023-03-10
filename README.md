@@ -1,5 +1,3 @@
 # Lokuri Website
 
-> Fake cloud hosting website used in this [YouTube tutorial](https://www.youtube.com/watch?v=p0bGHP-PXD4)
-
-> Fake cloud hosting website [Live Preview](https://zen-carson-c10c9f.netlify.app)
+ITオンライコースで勉強していた時の練習問題
